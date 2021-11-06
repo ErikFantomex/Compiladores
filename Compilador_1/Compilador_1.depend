@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1630400269 source:c:\users\dell\documents\unison__pandemico\5to semestre\compiladores\caminoalcompilador\compilador_1\main.cpp
+	<iostream>
+	<fstream>
+	"Buffer.h"
+
+1630400483 c:\users\dell\documents\unison__pandemico\5to semestre\compiladores\caminoalcompilador\compilador_1\buffer.h
+	<iostream>
+	<stdexcept>
+	<string.h>
+	"Buffer.tpp"
+
+1630400459 c:\users\dell\documents\unison__pandemico\5to semestre\compiladores\caminoalcompilador\compilador_1\buffer.tpp
+	"Buffer.h"
+
