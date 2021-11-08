@@ -1,7 +1,7 @@
 /* Nombre: .cpp
    Autor:
    Fecha:
-   Descripción:
+   DescripciÃ³n:
 */
 
 #include "ASintactico.h"
@@ -20,7 +20,7 @@ ASintactico::ASintactico(const char *direccion)
     char transiciones[256];
     ArbolBA<Llave> mapa;
     std::string tGen;
-    char texto[400];
+    char texto[2000];
     Llave aux,abusc;
     int i;
 
@@ -33,7 +33,7 @@ ASintactico::ASintactico(const char *direccion)
 
 
     //Leemos la primera linea para saber que caracter tine cada columna
-    archivo.getline(texto,400);
+    archivo.getline(texto,2000);
     for(i=0; texto[i] != '\t' ; ++i);
     for(int col=0; texto[i] != '\0' ; ++i)
     {
@@ -47,7 +47,7 @@ ASintactico::ASintactico(const char *direccion)
     std::string sAux;
     for(nEstados=0; !archivo.eof() ; ++nEstados)
     {
-        archivo.getline(texto,400);
+        archivo.getline(texto,2000);
 
         valAux=nEstados;
         sAux.clear();
@@ -75,10 +75,10 @@ ASintactico::ASintactico(const char *direccion)
     int eTrans; //Variable aux, guardaa el valor que va en la pos [i][j]
                     // (Ese valor se interpreta como "Estando en el estado 'i' y usando 'j' vete a [i][j]")
     archivo.seekg(0, archivo.beg);
-    archivo.getline(texto,400);
+    archivo.getline(texto,2000);
     for(int fila=0; !archivo.eof() ; ++fila)
     {
-        archivo.getline(texto,400);
+        archivo.getline(texto,2000);
 
         //Se lee el nombre del estado y se verifica si es de aceptacion o no
         for(i=0;texto[i]!='\t' && texto[i] != '*' ;++i) ;
@@ -147,7 +147,7 @@ ASintactico & ASintactico::operator= (const ASintactico & a2)
 
 
  /*****************************************************************************************
- ********************************   Metodos y funciónes   *********************************
+ ********************************   Metodos y funciÃ³nes   *********************************
  *****************************************************************************************/
 //*************************************************************************************
 void ASintactico::Reset()
@@ -177,7 +177,7 @@ std::string ASintactico::GetT() const
 }
 
  /*****************************************************************************************
- ************************************   Excepciónes   *************************************
+ ************************************   ExcepciÃ³nes   *************************************
  *****************************************************************************************/
 //*************************************************************************************
 const char * ASintactico::DireccionNula::what() const throw()
