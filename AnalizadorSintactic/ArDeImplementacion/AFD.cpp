@@ -72,6 +72,16 @@ const int * AFD::operator[] (const int & i) const
 //*************************************************************************************
 void AFD::Imprimir(std::ostream & salida/*=std::cout*/)const
 {
+    int c=0;
+    for(int j=0; j <tamAlf; ++j)
+    {
+        if( (*this)[0][j] != -1)
+        {
+            salida<<(char)(j+128)<<" ";
+        }
+    }
+    salida<<'\n';
+
     for(int i=0;i<nEstados;++i)
     {
         int c=0;

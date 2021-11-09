@@ -140,7 +140,6 @@ void ASintactico::LigarColumnas(int r[],std::ifstream &ent) const
         //El blog de notas guarda los caracteres especiales de una manera 'especial'
             //¡Los guarda en tres partes¡ Hay que normalizarlos en uno
         r[col++]= ((int)NormalizarCaracter(texto,i))+SANGRIA;
-        std::cout<<r[col-1]<<' '<<(char)(r[col-1]-SANGRIA)<<'\n';
     }
 }
 

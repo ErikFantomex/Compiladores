@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1636497515 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\main.cpp
+1636499873 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\main.cpp
 	<iostream>
 	<windows.h>
 	"ASintactico.h"
@@ -70,7 +70,7 @@
 1636407257 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\arboldebvl.tpp
 	"../ArbolDeBVL.h"
 
-1636499392 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\asintactico.cpp
+1636501354 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\asintactico.cpp
 	"../ASintactico.h"
 
 1636498216 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\afd.cpp
