@@ -1,0 +1,88 @@
+# depslib dependency file v1.0
+1636497515 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\main.cpp
+	<iostream>
+	<windows.h>
+	"ASintactico.h"
+
+1636499873 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\asintactico.h
+	<iostream>
+	<stdexcept>
+	<string>
+	<limits>
+	<fstream>
+	"ArbolDeBVL.h"
+	"AFD.h"
+	"Utileria.h"
+	"Llave.h"
+
+1636406172 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\asintactico.cpp
+	"ASintactico.h"
+
+1636323333 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\arbolba.h
+	<iostream>
+	<stdexcept>
+	"ColaCircular.h"
+	"ArbolBA.tpp"
+
+1636407244 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\colacircular.h
+	<iostream>
+	<stdexcept>
+	"ArDeImplementacion/ColaCircular.tpp"
+
+1614703516 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\colacircular.tpp
+	"ColaCircular.h"
+
+1636334259 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\arbolba.tpp
+	"ArbolBA.h"
+	<fstream>
+	<cstdlib>
+
+1636407251 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\arboldebvl.h
+	<iostream>
+	<stdexcept>
+	"ColaCircular.h"
+	"ArDeImplementacion/ArbolDeBVL.tpp"
+
+1636401230 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\arboldebvl.tpp
+	"ArbolDeBVL.h"
+
+1636406083 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\utileria.h
+	<windows.h>
+	<iostream>
+	<limits>
+	<fstream>
+
+1636406244 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\utileria.cpp
+	"Utileria.h"
+
+1636407080 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\archivosdeimplementacion\utileria.cpp
+	"../Utileria.h"
+
+1636407148 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\archivosdeimplementacion\colacircular.tpp
+	"../ColaCircular.h"
+
+1636496090 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\utileria.cpp
+	"../Utileria.h"
+
+1636407148 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\colacircular.tpp
+	"../ColaCircular.h"
+
+1636407257 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\arboldebvl.tpp
+	"../ArbolDeBVL.h"
+
+1636499392 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\asintactico.cpp
+	"../ASintactico.h"
+
+1636498216 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\afd.cpp
+	"../AFD.h"
+
+1636483243 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\afd.h
+	<iostream>
+
+1636493649 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\llave.h
+	<iostream>
+	<stdexcept>
+
+1636493649 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\analizadorsint\analizadorsintactic\ardeimplementacion\llave.cpp
+	"../Llave.h"
+
