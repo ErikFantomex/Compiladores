@@ -18,6 +18,8 @@ using namespace std;
 
 int main()
 {
+    int dos = 3;
+    cout<<dos<<'\n';
     std::ifstream entrada;
 
     entrada.open("stream.txt");
