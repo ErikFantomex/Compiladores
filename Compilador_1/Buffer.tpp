@@ -56,9 +56,12 @@ Buffer::~Buffer()
 Buffer & Buffer::operator= (const Buffer & buf)
 {
     if(&buf == this) return *this;
+    delete [] caracteres;
 
+    caracteres = new char [buf.tamano];
     inBf = buf.inBf;
     fnBf = buf.fnBf;
+
     for(int i=inBf, fin = IndiceUltimo() ; i!= fin ;++i)
     {
         if(i >= tamano) i = 0;
@@ -118,6 +121,7 @@ bool Buffer::Meter(const char & c )
     if(leyendoLC || leyendoBC) return true;
 
     if(lleno) return false;
+
     if(CaracterValido( caracteres[ IndiceUltimo() ] ,c ))
     {
         caracteres[fnBf++]=c;
@@ -231,13 +235,8 @@ void Buffer::ImprimirBuffer(std::ostream & salida) const
 //T
 bool Buffer::CaracterValido(const char &ultC,const char &lectura) const
 {
-    if(ultC == '\t' && lectura == '\t') return false;
-    if(ultC == '\t' && lectura == '\40') return false;
+    if(lectura == '\t' || lectura == '\n') return false;
     if(ultC == '\40' && lectura == '\40') return false;
-    if(ultC == '\40' && lectura == '\t') return false;
-    if(ultC == '\n' && lectura == '\n') return false;
-    if(ultC == '\n' && lectura == '\40') return false;
-    if(ultC == '\n' && lectura == '\t') return false;
     return true;
 }
 

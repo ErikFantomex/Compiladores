@@ -11,9 +11,7 @@
 #include<string.h>
 
 /** \brief Estructura que simula un buffer
-*
-* \param TAM Tamaño del buffer
-*/ //T
+*/
 class Buffer
 {
 
@@ -37,7 +35,7 @@ public:
  **********************************   Constructores    ************************************
  *****************************************************************************************/
 
-    //*
+    //*************************************************************************************
     /** \brief Constructor Por defecto
     *
     * \param tam tamano del buffer
@@ -46,7 +44,7 @@ public:
     * \param CCBC Comando para cierre de bloque de comentarios
     * \exception std::bad_alloc No hay memoria para el buffer
     *
-    */explicit Buffer(const int tam = 256, const char *CALC="//",
+    */Buffer(const int tam = 256, const char *CALC="//",
                         const char *CABC="/*", const char *CCBC="*/");
 
 
@@ -109,7 +107,6 @@ public:
     * \return False si el buffer está lleno(Y por ende C se perdio), true de lo contrario
     *
     */bool Meter(const char & c );
-
 
     //******************************************************************************************
     /** \brief Saca n elementos del buffer
@@ -227,5 +224,5 @@ private:
     */char & ElementoI(const int i) const;
 };
 
-#include "Buffer.tpp"
+
 #endif // BUFFER_H_INCLUDED

@@ -32,8 +32,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AFD.h" />
+		<Unit filename="ASintactico.h" />
+		<Unit filename="ArDeImplementacion/AFD.cpp" />
+		<Unit filename="ArDeImplementacion/ASintactico.cpp" />
+		<Unit filename="ArDeImplementacion/ArbolDeBVL.tpp" />
+		<Unit filename="ArDeImplementacion/ColaCircular.tpp" />
+		<Unit filename="ArDeImplementacion/Llave.cpp" />
+		<Unit filename="ArDeImplementacion/Utileria.cpp" />
+		<Unit filename="ArbolDeBVL.h" />
+		<Unit filename="Buffer.cpp" />
 		<Unit filename="Buffer.h" />
-		<Unit filename="Buffer.tpp" />
+		<Unit filename="ColaCircular.h" />
+		<Unit filename="Llave.h" />
+		<Unit filename="Utileria.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

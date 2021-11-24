@@ -13,3 +13,74 @@
 1630400459 c:\users\dell\documents\unison__pandemico\5to semestre\compiladores\caminoalcompilador\compilador_1\buffer.tpp
 	"Buffer.h"
 
+1637681609 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\ardeimplementacion\afd.cpp
+	"../AFD.h"
+
+1636483243 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\afd.h
+	<iostream>
+
+1636493649 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\ardeimplementacion\llave.cpp
+	"../Llave.h"
+
+1636493649 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\llave.h
+	<iostream>
+	<stdexcept>
+
+1636496090 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\ardeimplementacion\utileria.cpp
+	"../Utileria.h"
+
+1636406083 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\utileria.h
+	<windows.h>
+	<iostream>
+	<limits>
+	<fstream>
+
+1637693649 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\ardeimplementacion\asintactico.cpp
+	"../ASintactico.h"
+
+1637692077 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\asintactico.h
+	<iostream>
+	<stdexcept>
+	<string>
+	<limits>
+	<fstream>
+	"Buffer.h"
+	"ArbolDeBVL.h"
+	"AFD.h"
+	"Utileria.h"
+	"Llave.h"
+
+1637690970 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\buffer.h
+	<iostream>
+	<stdexcept>
+	<string.h>
+
+1637690483 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\buffer.tpp
+	"Buffer.h"
+
+1636407251 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\arboldebvl.h
+	<iostream>
+	<stdexcept>
+	"ColaCircular.h"
+	"ArDeImplementacion/ArbolDeBVL.tpp"
+
+1636407244 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\colacircular.h
+	<iostream>
+	<stdexcept>
+	"ArDeImplementacion/ColaCircular.tpp"
+
+1636407148 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\ardeimplementacion\colacircular.tpp
+	"../ColaCircular.h"
+
+1636407257 c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\ardeimplementacion\arboldebvl.tpp
+	"../ArbolDeBVL.h"
+
+1637692845 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\main.cpp
+	<iostream>
+	<fstream>
+	"ASintactico.h"
+	"Utileria.h"
+
+1637690926 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\buffer.cpp
+	"Buffer.h"
+

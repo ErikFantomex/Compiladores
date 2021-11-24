@@ -1,6 +1,9 @@
+
+
 #include <iostream>
 #include <fstream>
-#include "Buffer.h"
+#include "ASintactico.h"
+#include "Utileria.h"
 
 using namespace std;
 
@@ -27,6 +30,7 @@ int main()
     Lectura(entrada);
 
 
+
     entrada.close();
     return 0;
 }
@@ -36,6 +40,7 @@ int main()
 void Lectura(ifstream &entrada )
 {
     char aux;
+    //ASintactico();
     Buffer bufAL(300);
 
     if(entrada.get(aux)) bufAL.Meter(aux);
@@ -47,10 +52,10 @@ void Lectura(ifstream &entrada )
         {
             cout<<bufAL[0];
             //esperate tantito al analizador sintactico
-            bufAL.Sacar(bufAL.CantidadCaracteres())
+            bufAL.Sacar(bufAL.CantidadCaracteres());
 
         }
-        bufAL.Meter(aux)
+        bufAL.Meter(aux);
     }
     cout<<bufAL;
 }
