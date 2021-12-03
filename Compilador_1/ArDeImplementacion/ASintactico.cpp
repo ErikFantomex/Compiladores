@@ -1,7 +1,7 @@
 /* Nombre: .cpp
    Autor:
    Fecha:
-   Descripción:
+   DescripciÃ³n:
 */
 
 #include "../ASintactico.h"
@@ -66,7 +66,7 @@ ASintactico & ASintactico::operator= (const ASintactico & a2)
 
 
  /*****************************************************************************************
- ********************************   Metodos y funciónes   *********************************
+ ********************************   Metodos y funciÃ³nes   *********************************
  *****************************************************************************************/
 //*************************************************************************************
 void ASintactico::Reset()
@@ -81,30 +81,71 @@ void ASintactico::Avanzar(const char &c)
     aConstantes.Avanzar(((int) c) + SANGRIA);
 }
 
-//*************************************************************************************
-bool ASintactico::estadoAceptacion() const
-{
-    return aConstantes.estadoAceptacion() || aVariables.estadoAceptacion();
-}
-
 
 //*************************************************************************************
-std::string ASintactico::LeerBuffer(Buffer &buff)
+std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
 {
+    if(buff[0] == ' ')
+    {
+        buff.Sacar(1);
+        return T_ESPACIO;
+    }
 
-}
+    std::string tokenCons =NOACEPTACION;
+    std::string tokenVar = NOACEPTACION;
+    int maxConst,maxVar;
 
+    tokenCons = EvaluarAutomata(buff,aConstantes,maxConst);
+    //tokenVar = EvaluarAutomata(buff,aVariables,maxVar);
 
-//*************************************************************************************
-std::string ASintactico::GetT() const
-{
-    if(!estadoAceptacion())throw Grosero();
-    if(aConstantes.estadoAceptacion() ) return listTonkenConst[aConstantes.GetEstadoAct() ];
-    else return listTonkenVar[aVariables.GetEstadoAct()];
+    if(!fin && (tokenCons == NOACEPTACION || tokenVar == NOACEPTACION) )
+        return NOACEPTACION;
+    if(fin && tokenCons == NOACEPTACION)
+    {
+        buff.Sacar(maxVar);
+        return tokenVar;
+    }
+    if(fin && tokenVar == NOACEPTACION)
+    {
+        buff.Sacar(maxConst);
+        return tokenVar;
+    }
+
+    if(tokenCons == T_ERROR)
+    {
+        buff.Sacar(maxVar);
+        return tokenVar;
+    }
+
+    if(tokenVar == T_ERROR)
+    {
+        buff.Sacar(maxConst);
+        return tokenVar;
+    }
+
+    if(maxConst  == maxVar)
+    {
+        buff.Sacar(maxConst);
+        return tokenCons;
+    }
+    else
+    {
+        if(maxConst > maxVar)
+        {
+            buff.Sacar(maxConst);
+            return tokenCons;
+        }
+        else
+        {
+            buff.Sacar(maxVar);
+            return tokenVar;
+        }
+    }
+
 }
 
  /*****************************************************************************************
- ************************************   Excepciónes   *************************************
+ ************************************   ExcepciÃ³nes   *************************************
  *****************************************************************************************/
 //*************************************************************************************
 const char * ASintactico::DireccionNula::what() const throw()
@@ -127,6 +168,36 @@ const char * ASintactico::TablaIncorrecta::what() const throw()
  /*****************************************************************************************
  *********************************   Metodos privados   ***********************************
  *****************************************************************************************/
+//*************************************************************************************
+std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata, int &tamCadMasLarga)
+{
+    std::string token=NOACEPTACION;
+    std::string _;
+
+    automata.Reset();
+    for(int i=0, f = buff.CantidadCaracteres(); i<f ; ++i)
+    {
+        automata.Avanzar(buff[i]);
+
+        if(automata.estadoAceptacion())
+        {
+            _ = token;
+            token = listTonkenConst[automata.GetEstadoAct() ];
+            if(token == T_ERROR)
+            {
+                if(_ != NOACEPTACION)
+                    token = _;
+                else
+                    tamCadMasLarga = 0;
+
+                return token;
+            }
+            tamCadMasLarga = i+1;
+        }
+    }
+    return token;
+}
+
 //*************************************************************************************
 void ASintactico::InicializarAFD(const char *dir, AFD & afd, std::string ** lTokens) const
 {
@@ -167,7 +238,7 @@ void ASintactico::LigarColumnas(int r[],std::ifstream &ent) const
     {
         if(texto[i] == '\t') continue;
         //El blog de notas guarda los caracteres especiales de una manera 'especial'
-            //¡Los guarda en tres partes¡ Hay que normalizarlos en uno
+            //Â¡Los guarda en tres partesÂ¡ Hay que normalizarlos en uno
         r[col++]= ((int)NormalizarCaracter(texto,i))+SANGRIA;
     }
 }
@@ -200,8 +271,8 @@ int ASintactico::NumerarEstados(ArbolDeBVL<Llave> &abl,std::ifstream &ent) const
 //*************************************************************************************
 void ASintactico::DimencionarAFD(int &n,AFD &afd, std::string **lTokens) const
 {
-    //Nuestro alfabeto es de 68 elementos, pero para hacerlo más dinamico se declara de
-        // 268 por el número de caracteres ascii
+    //Nuestro alfabeto es de 68 elementos, pero para hacerlo mÃ¡s dinamico se declara de
+        // 268 por el nÃºmero de caracteres ascii
     afd.Dimencionar(n,TAMALFABETO+2,-1);
     (*lTokens) = new std::string[n];
 }
