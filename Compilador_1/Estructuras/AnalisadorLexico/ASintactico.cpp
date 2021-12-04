@@ -94,8 +94,8 @@ std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
     std::string tokenVar = NOACEPTACION;
     int maxConst=0,maxVar=0;
 
-    tokenCons = EvaluarAutomata(buff,aConstantes,maxConst);
-    //tokenVar = EvaluarAutomata(buff,aVariables,maxVar);
+    tokenCons = EvaluarAutomata(buff,aConstantes,maxConst,listTonkenConst);
+    tokenVar = EvaluarAutomata(buff,aVariables,maxVar,listTonkenVar);
 
     if(!fin && (tokenCons == NOACEPTACION || tokenVar == NOACEPTACION) )
         return NOACEPTACION;
@@ -107,7 +107,7 @@ std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
     if(fin && tokenVar == NOACEPTACION)
     {
         buff.Sacar(maxConst);
-        return tokenVar;
+        return tokenCons;
     }
 
     if(tokenCons == T_ERROR)
@@ -119,7 +119,7 @@ std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
     if(tokenVar == T_ERROR)
     {
         buff.Sacar(maxConst);
-        return tokenVar;
+        return tokenCons;
     }
 
     if(maxConst  == maxVar)
@@ -168,7 +168,8 @@ const char * ASintactico::TablaIncorrecta::what() const throw()
  *********************************   Metodos privados   ***********************************
  *****************************************************************************************/
 //*************************************************************************************
-std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata, int &tamCadMasLarga)
+std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata,
+                int &tamCadMasLarga, std::string *listaToken)
 {
     std::string token=NOACEPTACION;
     std::string _;
@@ -177,12 +178,12 @@ std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata, int &tamCa
     automata.Reset();
     for(int i=0, f = buff.CantidadCaracteres(); i<f ; ++i)
     {
-        automata.Avanzar(buff[i]);
+        automata.Avanzar(buff[i]+SANGRIA);
 
         if(automata.estadoAceptacion())
         {
             _ = token;
-            token = listTonkenConst[automata.GetEstadoAct() ];
+            token = listaToken[automata.GetEstadoAct() ];
             if(token == T_ERROR)
             {
                 if(_ != NOACEPTACION)

@@ -138,7 +138,7 @@ public:
     */void Dimencionar(const int &n, const int &m, const int &valIn=-1);
 
     //*************************************************************************************
-    /** \brief Mueve el automata usando la transicion 'c'
+    /** \brief Funcion para saber si el estado actual es de aceptacion
     *   \return True si el estado actual es de aceptacion, false de lo contrario
     *
     */bool estadoAceptacion() const;

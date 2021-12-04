@@ -146,7 +146,7 @@
 1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\buffer.cpp
 	"Buffer.h"
 
-1638639875 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
+1638651791 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
 	<iostream>
 	<fstream>
 	"Estructuras/AnalisadorLexico/ASintactico.h"
@@ -163,7 +163,7 @@
 1638636826 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\afd\afd.cpp
 	"AFD.h"
 
-1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\afd\afd.h
+1638651484 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\afd\afd.h
 	<iostream>
 
 1638637220 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\llave.cpp
@@ -182,10 +182,10 @@
 	<limits>
 	<fstream>
 
-1638640849 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.cpp
+1638651891 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.cpp
 	"ASintactico.h"
 
-1638640656 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.h
+1638651293 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.h
 	<iostream>
 	<stdexcept>
 	<string>

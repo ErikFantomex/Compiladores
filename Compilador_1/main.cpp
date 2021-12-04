@@ -40,12 +40,12 @@ void Lectura(ifstream &entrada )
 {
     char nexLinea[300];
 
-    ASintactico aLexico("Automatas/AutomataConstantes.txt");
+    ASintactico aLexico("Automatas/AutomataConstantes.txt","Automatas/AutomataVariables.txt");
     Buffer bufAL(300);
     int numTokoens=0;
     std::string cadenaTokens[10000];
     std::string tAux;
-/*
+
     for(int linea = 0;!entrada.eof(); ++linea )
     {
         entrada.getline(nexLinea,300);
@@ -83,7 +83,7 @@ void Lectura(ifstream &entrada )
             if(tAux != T_ESPACIO)
                 cadenaTokens[numTokoens++] = tAux;
     }
-*/
+
     for(int i=0;i<numTokoens;++i)
         cout<<cadenaTokens[i]<<'\n';
 }

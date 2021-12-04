@@ -208,7 +208,8 @@ private:
     *   \param tamCadenaMasLarga Variable en la cual se guarda el tamaño del token más largo
     *   \return El token generado
     *
-    */std::string EvaluarAutomata(Buffer &buff, AFD &automata, int &tamCadMasLarga);
+    */std::string EvaluarAutomata(Buffer &buff, AFD &automata,
+                    int &tamCadMasLarga, std::string *listaToken);
 
     //*************************************************************************************
     /** \brief Función que guarda el caracter ligado Variables la columna número 'i'
