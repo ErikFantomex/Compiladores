@@ -41,6 +41,7 @@
 		<Unit filename="Estructuras/HasImprovisado/ArbolDeBVL.h" />
 		<Unit filename="Estructuras/HasImprovisado/ArbolDeBVL.tpp" />
 		<Unit filename="Estructuras/HasImprovisado/HasImp.h" />
+		<Unit filename="Estructuras/HasImprovisado/HasImp.tpp" />
 		<Unit filename="Estructuras/HasImprovisado/Llave.h" />
 		<Unit filename="Estructuras/HasImprovisado/Llave.tpp" />
 		<Unit filename="Estructuras/Utileria/ColaCircular.h" />

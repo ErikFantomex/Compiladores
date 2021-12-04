@@ -2,57 +2,59 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Buffer.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\AFD\AFD.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="472" topLine="3" />
+			<Cursor1 position="7556" topLine="168" />
 		</Cursor>
 	</File>
-	<File name="ArDeImplementacion\ArbolDeBVL.tpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\HasImprovisado\HasImp.tpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="3" />
+			<Cursor1 position="3112" topLine="89" />
 		</Cursor>
 	</File>
-	<File name="Buffer.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\HasImprovisado\Llave.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="9138" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="22" />
-		</Folding>
-	</File>
-	<File name="ArDeImplementacion\ASintactico.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3143" topLine="78" />
+			<Cursor1 position="867" topLine="17" />
 		</Cursor>
 	</File>
-	<File name="ColaCircular.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\HasImprovisado\ArbolDeBVL.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="218" topLine="0" />
+			<Cursor1 position="0" topLine="93" />
 		</Cursor>
 	</File>
-	<File name="ArDeImplementacion\Utileria.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\AFD\AFD.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6181" topLine="234" />
+			<Cursor1 position="3537" topLine="106" />
 		</Cursor>
 	</File>
-	<File name="Utileria.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\HasImprovisado\Llave.tpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2698" topLine="81" />
+			<Cursor1 position="3444" topLine="91" />
 		</Cursor>
 	</File>
-	<File name="ArDeImplementacion\AFD.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\AnalisadorLexico\ASintactico.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="189" />
+			<Cursor1 position="660" topLine="152" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="448" topLine="0" />
+			<Cursor1 position="2276" topLine="67" />
 		</Cursor>
 	</File>
-	<File name="ASintactico.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Estructuras\HasImprovisado\ArbolDeBVL.tpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5162" topLine="126" />
+			<Cursor1 position="9407" topLine="328" />
+		</Cursor>
+	</File>
+	<File name="Estructuras\HasImprovisado\HasImp.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1019" topLine="22" />
+		</Cursor>
+	</File>
+	<File name="Estructuras\AnalisadorLexico\ASintactico.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4140" topLine="119" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
