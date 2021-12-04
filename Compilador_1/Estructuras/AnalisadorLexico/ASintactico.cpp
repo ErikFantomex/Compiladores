@@ -4,7 +4,7 @@
    Descripción:
 */
 
-#include "../ASintactico.h"
+#include "ASintactico.h"
 
 
 
@@ -16,7 +16,6 @@
 ASintactico::ASintactico(const char *dir/*, const char *dir2*/)
 {
     InicializarAFD(dir,aConstantes,&listTonkenConst);
-
 }
 
 //*************************************************************************************
@@ -93,7 +92,7 @@ std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
 
     std::string tokenCons =NOACEPTACION;
     std::string tokenVar = NOACEPTACION;
-    int maxConst,maxVar;
+    int maxConst=0,maxVar=0;
 
     tokenCons = EvaluarAutomata(buff,aConstantes,maxConst);
     //tokenVar = EvaluarAutomata(buff,aVariables,maxVar);
@@ -174,6 +173,7 @@ std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata, int &tamCa
     std::string token=NOACEPTACION;
     std::string _;
 
+    tamCadMasLarga = 0;
     automata.Reset();
     for(int i=0, f = buff.CantidadCaracteres(); i<f ; ++i)
     {
@@ -187,8 +187,6 @@ std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata, int &tamCa
             {
                 if(_ != NOACEPTACION)
                     token = _;
-                else
-                    tamCadMasLarga = 0;
 
                 return token;
             }
@@ -202,9 +200,8 @@ std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata, int &tamCa
 void ASintactico::InicializarAFD(const char *dir, AFD & afd, std::string ** lTokens) const
 {
     std::ifstream archivo(dir);
-    ArbolDeBVL<Llave> mapa;
+    HasImp< std::string,int > mapa;
     int caracDeCol[TAMALFABETO+2];
-
     if(!archivo)
     {
         archivo.close();
@@ -245,12 +242,11 @@ void ASintactico::LigarColumnas(int r[],std::ifstream &ent) const
 
 
 //*************************************************************************************
-int ASintactico::NumerarEstados(ArbolDeBVL<Llave> &abl,std::ifstream &ent) const
+int ASintactico::NumerarEstados(HasImp<std::string,int> &mapa,std::ifstream &ent) const
 {
     std::string sAux;
     char texto[2000];
     int nEstados;
-    Llave aux;
 
     for(nEstados=0; !ent.eof() ; ++nEstados)
     {
@@ -262,8 +258,7 @@ int ASintactico::NumerarEstados(ArbolDeBVL<Llave> &abl,std::ifstream &ent) const
         for(int j=0;texto[j]!='\t' && texto[j]!='*';++j)
             sAux+=texto[j];
 
-        aux.Set(sAux,nEstados);
-        abl.Agregar(aux);
+        mapa.Agregar(sAux,nEstados);
     }
     return nEstados;
 }
@@ -278,7 +273,7 @@ void ASintactico::DimencionarAFD(int &n,AFD &afd, std::string **lTokens) const
 }
 
 //*************************************************************************************
-void ASintactico::LlenarAFD(AFD & afd, std::string **lTokens, ArbolDeBVL<Llave> & mapa,
+void ASintactico::LlenarAFD(AFD & afd, std::string **lTokens, HasImp<std::string,int> & mapa,
         std::ifstream &ent, int relCol[]) const
 {
     std::string tGen;
@@ -333,11 +328,10 @@ std::string ASintactico::GetTokenEstado(const char ent[], int &i) const
 
 
 //*************************************************************************************
-void ASintactico::LeerEstado(AFD & afd, int &estado, ArbolDeBVL<Llave> &mapa, int &i,
+void ASintactico::LeerEstado(AFD & afd, int &estado, HasImp<std::string,int>  &mapa, int &i,
         int relCol[],const char ent[] ) const
 {
     std::string sAux;
-    Llave aBuscar;
 
     for(int colD=0,colR;ent[i]!='\0';)
     {
@@ -351,10 +345,8 @@ void ASintactico::LeerEstado(AFD & afd, int &estado, ArbolDeBVL<Llave> &mapa, in
         while(ent[i]!='\t' && ent[i] != '\0')
             sAux+=ent[i++];
 
-        aBuscar.Set(sAux);
-
         colR=relCol[colD++];
-        afd[estado][colR]= mapa.Buscar(aBuscar).GetValor();
+        afd[estado][colR]= mapa.Buscar(sAux);
     }
 }
 

@@ -9,7 +9,7 @@
 
 #include<iostream>
 #include<stdexcept>
-#include"ColaCircular.h"
+#include"../Utileria/ColaCircular.h"
 
 
 //*************************************************************************************
@@ -311,6 +311,6 @@ private:
     *
     */void RDI(Nodo *&subRaiz);
 };
-#include "ArDeImplementacion/ArbolDeBVL.tpp"
+#include "ArbolDeBVL.tpp"
 
 #endif // ARBOLDEBVL_H_INCLUDED

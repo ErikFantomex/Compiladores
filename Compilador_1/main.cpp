@@ -1,9 +1,8 @@
 
-
 #include <iostream>
 #include <fstream>
-#include "ASintactico.h"
-#include "Utileria.h"
+#include "Estructuras/AnalisadorLexico/ASintactico.h"
+#include "Estructuras/Utileria/Utileria.h"
 
 using namespace std;
 
@@ -46,7 +45,7 @@ void Lectura(ifstream &entrada )
     int numTokoens=0;
     std::string cadenaTokens[10000];
     std::string tAux;
-
+/*
     for(int linea = 0;!entrada.eof(); ++linea )
     {
         entrada.getline(nexLinea,300);
@@ -84,7 +83,7 @@ void Lectura(ifstream &entrada )
             if(tAux != T_ESPACIO)
                 cadenaTokens[numTokoens++] = tAux;
     }
-
+*/
     for(int i=0;i<numTokoens;++i)
         cout<<cadenaTokens[i]<<'\n';
 }

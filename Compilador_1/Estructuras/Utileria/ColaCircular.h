@@ -156,6 +156,6 @@ private:
 
 
 };
-#include "ArDeImplementacion/ColaCircular.tpp"
+#include "ColaCircular.tpp"
 
 #endif // COLACIRCULAR_H_INCLUDED

@@ -14,6 +14,7 @@
 /** \brief Clase que representa una 'Llave'. cada valor se identifica por su string
  *              pero tiene un valor asociado a ese identificador
  */
+template <typename T_1,typename T_2>
 class Llave
 {
 
@@ -23,12 +24,14 @@ class Llave
 
 
     //*************************************************************************************
-    /** \brief imprime una ASintactico en un flujo de salida
+    /** \brief imprime una llave en un flujo de salida
     *
     * \param salida el flujo de salida
     * \return El mismo flujo de salida
     *
-    */friend std::ostream & operator<<(std::ostream & salida,const Llave &x)
+    */
+    template <typename t1,typename t2>
+    friend std::ostream & operator<<(std::ostream & salida,const Llave<t1,t2> &x)
     {
         salida<<'['<<x.llave<<" , "<<x.valor<<']';
         return salida;
@@ -46,7 +49,7 @@ public:
     */Llave();
 
     //*************************************************************************************
-    /** \brief Constror por defecto
+    /** \brief Constror de copias
     *
     */Llave(const Llave & ll2);
 
@@ -115,21 +118,30 @@ public:
     *   \param llave El valor a asignar a 'llave'
     *   \param v El valor a asignar a 'valor'
     *
-    */void Set(const std::string & s, const int &v=0);
+    */void Set(const T_1 & s, const T_2 &v);
+
+    //*************************************************************************************
+    /** \brief Sobrecarga para set, solo para la llave
+    *
+    *   \param llave El valor a asignar a 'llave'
+    *   \param v El valor a asignar a 'valor'
+    *
+    */void Set(const T_1 & s);
 
     //*************************************************************************************
     /** \brief Funcion Get para el valor
     *   \return El 'Valor'
     *
-    */int GetValor() const;
+    */T_2 GetValor() const;
 
 private:
-    std::string llave;
-    int valor;
+    T_1 llave;
+    T_2 valor;
   /*****************************************************************************************
  *********************************   Metodos privados   ***********************************
  *****************************************************************************************/
 };
 
+#include "Llave.tpp"
 
 #endif // LLAVE_H_INCLUDED

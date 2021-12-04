@@ -4,7 +4,7 @@
    Descripción: Archivo de implementación de la clase 'ArbolDeBVL'
 */
 
-#include"../ArbolDeBVL.h"
+#include"ArbolDeBVL.h"
 
 
  /*****************************************************************************************

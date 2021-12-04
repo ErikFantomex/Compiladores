@@ -15,11 +15,10 @@
 #include <limits>
 #include <fstream>
 
-#include "Buffer.h"
-#include "ArbolDeBVL.h"
-#include "AFD.h"
-#include "Utileria.h"
-#include "Llave.h"
+#include "../Buffer/Buffer.h"
+#include "../AFD/AFD.h"
+#include "../Utileria/Utileria.h"
+#include "../HasImprovisado/HasImp.h"
 
 
 //C++ representa algunos caracteres(Como á) con un valor negativo en el ascii
@@ -227,7 +226,7 @@ private:
     *   \param ent El archivo Variables leer
     *   \return El número de estados en el archivo
     *
-    */int NumerarEstados( ArbolDeBVL<Llave> & abvl, std::ifstream &ent) const;
+    */int NumerarEstados( HasImp<std::string,int> & mapa, std::ifstream &ent) const;
 
     //*************************************************************************************
     /** \brief Dimenciona el AFN para tener 'n' estados
@@ -247,7 +246,7 @@ private:
     *   \param ent La direccion del blog de notas con el automata
     *   \param relCol Los car. de las columnas (Responde ¿Que car. está en la columna x?)
     *
-    */void LlenarAFD(AFD & afd, std::string **lTokens, ArbolDeBVL<Llave> &mapa,
+    */void LlenarAFD(AFD & afd, std::string **lTokens, HasImp<std::string,int> &mapa,
             std::ifstream & ent, int relCol[]) const;
 
     //*************************************************************************************
@@ -279,7 +278,7 @@ private:
     *   \param relCol Los car. de las columnas (Responde ¿Que car. está en la columna x?)
     *   \param ent El texto, todo el renglon del estado
     *
-    */void LeerEstado(AFD & afd, int &estado, ArbolDeBVL<Llave> &mapa, int &i,
+    */void LeerEstado(AFD & afd, int &estado, HasImp<std::string,int> &mapa, int &i,
             int relCol[], const char ent[])const;
 
 };

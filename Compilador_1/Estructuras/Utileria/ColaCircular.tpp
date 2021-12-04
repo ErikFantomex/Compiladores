@@ -4,7 +4,7 @@
    Descripción: Archivo de implementación de la clase ColaCircular
 */
 
-#include "../ColaCircular.h"
+#include "ColaCircular.h"
 
  /*****************************************************************************************
  **********************************   Constructores    ************************************

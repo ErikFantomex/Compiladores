@@ -4,21 +4,22 @@
    Descripción: Archivo de cabecera de la clase AFD
 */
 
-#include"../Llave.h"
+#include "Llave.h"
 
  /*****************************************************************************************
  **********************************   Constructores    ************************************
  *****************************************************************************************/
 //*************************************************************************************
-Llave::Llave()
+template <typename T_1,typename T_2>
+Llave<T_1,T_2>::Llave()
 {
-    this->llave= "";
-    this->valor = -6;
+
 }
 
 
 //*************************************************************************************
-Llave::Llave(const Llave & ll2)
+template <typename T_1,typename T_2>
+Llave<T_1,T_2>::Llave(const Llave<T_1,T_2> & ll2)
 {
     (*this) = ll2;
 }
@@ -27,7 +28,8 @@ Llave::Llave(const Llave & ll2)
  ************************************    Operadores    ************************************
  *****************************************************************************************/
 //*************************************************************************************
-Llave & Llave::operator= (const Llave & ll2)
+template <typename T_1,typename T_2>
+Llave<T_1,T_2> & Llave<T_1,T_2>::operator= (const Llave<T_1,T_2> & ll2)
 {
     if(this == &ll2) return *this;
 
@@ -39,35 +41,40 @@ Llave & Llave::operator= (const Llave & ll2)
 
 
 //*************************************************************************************
-bool Llave::operator<(const Llave & ll2) const
+template <typename T_1,typename T_2>
+bool Llave<T_1,T_2>::operator<(const Llave<T_1,T_2> & ll2) const
 {
     return this->llave < ll2.llave;
 }
 
 
 //*************************************************************************************
-bool Llave::operator>(const Llave & ll2) const
+template <typename T_1,typename T_2>
+bool Llave<T_1,T_2>::operator>(const Llave<T_1,T_2> & ll2) const
 {
     return this->llave > ll2.llave;
 }
 
 
 //*************************************************************************************
-bool Llave::operator==(const Llave & ll2) const
+template <typename T_1,typename T_2>
+bool Llave<T_1,T_2>::operator==(const Llave<T_1,T_2> & ll2) const
 {
     return this->llave == ll2.llave;
 }
 
 
 //*************************************************************************************
-bool Llave::operator>=(const Llave & ll2) const
+template <typename T_1,typename T_2>
+bool Llave<T_1,T_2>::operator>=(const Llave<T_1,T_2> & ll2) const
 {
     return this->llave >= ll2.llave;
 }
 
 
 //*************************************************************************************
-bool Llave::operator<=(const Llave & ll2) const
+template <typename T_1,typename T_2>
+bool Llave<T_1,T_2>::operator<=(const Llave<T_1,T_2> & ll2) const
 {
     return this->llave <= ll2.llave;
 }
@@ -78,7 +85,15 @@ bool Llave::operator<=(const Llave & ll2) const
  ********************************   Metodos y funciónes   *********************************
  *****************************************************************************************/
 //*************************************************************************************
-void Llave::Set(const std::string & s, const int &v/*=0*/)
+template <typename T_1,typename T_2>
+void Llave<T_1,T_2>::Set(const T_1 & s)
+{
+    llave=s;
+}
+
+//*************************************************************************************
+template <typename T_1,typename T_2>
+void Llave<T_1,T_2>::Set(const T_1 & s, const T_2 &v)
 {
     llave=s;
     valor=v;
@@ -86,7 +101,8 @@ void Llave::Set(const std::string & s, const int &v/*=0*/)
 
 
 //*************************************************************************************
-int Llave::GetValor() const
+template <typename T_1,typename T_2>
+T_2 Llave<T_1,T_2>::GetValor() const
 {
     return valor;
 }

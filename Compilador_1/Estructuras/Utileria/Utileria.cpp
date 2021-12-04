@@ -5,7 +5,7 @@
  Descripción: Funciones de utileria
 */
 
-#include "../Utileria.h"
+#include "Utileria.h"
 
 //*************************************************************************************************************************
 void DibujarMarcoDoble(int alto,int ancho,int posX, int posY ,double segundos ,Color colFondo ,Color colTex ,bool relleno ,Color colRell)

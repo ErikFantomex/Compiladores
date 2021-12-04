@@ -84,3 +84,150 @@
 1637690926 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\caminoalcompilador\compilador_1\buffer.cpp
 	"Buffer.h"
 
+1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\ardeimplementacion\afd.cpp
+	"../AFD.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\afd.h
+	<iostream>
+
+1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\ardeimplementacion\asintactico.cpp
+	"../ASintactico.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\asintactico.h
+	<iostream>
+	<stdexcept>
+	<string>
+	<limits>
+	<fstream>
+	"Buffer.h"
+	"ArbolDeBVL.h"
+	"AFD.h"
+	"Utileria.h"
+	"Llave.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\buffer.h
+	<iostream>
+	<stdexcept>
+	<string.h>
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\arboldebvl.h
+	<iostream>
+	<stdexcept>
+	"ColaCircular.h"
+	"ArDeImplementacion/ArbolDeBVL.tpp"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\colacircular.h
+	<iostream>
+	<stdexcept>
+	"ArDeImplementacion/ColaCircular.tpp"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\ardeimplementacion\colacircular.tpp
+	"../ColaCircular.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\ardeimplementacion\arboldebvl.tpp
+	"../ArbolDeBVL.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\utileria.h
+	<windows.h>
+	<iostream>
+	<limits>
+	<fstream>
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\llave.h
+	<iostream>
+	<stdexcept>
+
+1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\ardeimplementacion\llave.cpp
+	"../Llave.h"
+
+1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\ardeimplementacion\utileria.cpp
+	"../Utileria.h"
+
+1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\buffer.cpp
+	"Buffer.h"
+
+1638639875 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
+	<iostream>
+	<fstream>
+	"Estructuras/AnalisadorLexico/ASintactico.h"
+	"Estructuras/Utileria/Utileria.h"
+
+1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\buffer\buffer.cpp
+	"Buffer.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\buffer\buffer.h
+	<iostream>
+	<stdexcept>
+	<string.h>
+
+1638636826 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\afd\afd.cpp
+	"AFD.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\afd\afd.h
+	<iostream>
+
+1638637220 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\llave.cpp
+	"Llave.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\llave.h
+	<iostream>
+	<stdexcept>
+
+1638636838 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\utileria.cpp
+	"Utileria.h"
+
+1638635994 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\utileria.h
+	<windows.h>
+	<iostream>
+	<limits>
+	<fstream>
+
+1638640849 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.cpp
+	"ASintactico.h"
+
+1638640656 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.h
+	<iostream>
+	<stdexcept>
+	<string>
+	<limits>
+	<fstream>
+	"../Buffer/Buffer.h"
+	"../AFD/AFD.h"
+	"../Utileria/Utileria.h"
+	"../HasImprovisado/HasImp.h"
+
+1638636961 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\arboldebvl.h
+	<iostream>
+	<stdexcept>
+	"../Utileria/ColaCircular.h"
+	"ArbolDeBVL.tpp"
+
+1638636951 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\colacircular.h
+	<iostream>
+	<stdexcept>
+	"ColaCircular.tpp"
+
+1638636956 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\colacircular.tpp
+	"ColaCircular.h"
+
+1638636966 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\arboldebvl.tpp
+	"ArbolDeBVL.h"
+
+1638643843 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\llave.h
+	<iostream>
+	<stdexcept>
+	"Llave.tpp"
+
+1638643510 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\hasimp.h
+	<iostream>
+	<stdexcept>
+	"Llave.h"
+	"ArbolDeBVL.h"
+	"HasImp.tpp"
+
+1638643535 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\hasimp.tpp
+	"HasImp.h"
+
+1638643333 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\llave.tpp
+	"Llave.h"
+

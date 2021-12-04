@@ -32,20 +32,23 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="AFD.h" />
-		<Unit filename="ASintactico.h" />
-		<Unit filename="ArDeImplementacion/AFD.cpp" />
-		<Unit filename="ArDeImplementacion/ASintactico.cpp" />
-		<Unit filename="ArDeImplementacion/ArbolDeBVL.tpp" />
-		<Unit filename="ArDeImplementacion/ColaCircular.tpp" />
-		<Unit filename="ArDeImplementacion/Llave.cpp" />
-		<Unit filename="ArDeImplementacion/Utileria.cpp" />
-		<Unit filename="ArbolDeBVL.h" />
-		<Unit filename="Buffer.cpp" />
-		<Unit filename="Buffer.h" />
-		<Unit filename="ColaCircular.h" />
-		<Unit filename="Llave.h" />
-		<Unit filename="Utileria.h" />
+		<Unit filename="Estructuras/AFD/AFD.cpp" />
+		<Unit filename="Estructuras/AFD/AFD.h" />
+		<Unit filename="Estructuras/AnalisadorLexico/ASintactico.cpp" />
+		<Unit filename="Estructuras/AnalisadorLexico/ASintactico.h" />
+		<Unit filename="Estructuras/Buffer/Buffer.cpp" />
+		<Unit filename="Estructuras/Buffer/Buffer.h" />
+		<Unit filename="Estructuras/HasImprovisado/ArbolDeBVL.h" />
+		<Unit filename="Estructuras/HasImprovisado/ArbolDeBVL.tpp" />
+		<Unit filename="Estructuras/HasImprovisado/HasImp.h" />
+		<Unit filename="Estructuras/HasImprovisado/Llave.h" />
+		<Unit filename="Estructuras/HasImprovisado/Llave.tpp" />
+		<Unit filename="Estructuras/Utileria/ColaCircular.h" />
+		<Unit filename="Estructuras/Utileria/ColaCircular.tpp" />
+		<Unit filename="Estructuras/Utileria/Pila.h" />
+		<Unit filename="Estructuras/Utileria/Pila.tpp" />
+		<Unit filename="Estructuras/Utileria/Utileria.cpp" />
+		<Unit filename="Estructuras/Utileria/Utileria.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
