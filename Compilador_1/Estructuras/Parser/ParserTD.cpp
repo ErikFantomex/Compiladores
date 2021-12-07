@@ -56,6 +56,12 @@ bool ParserTD::EvaluarCadena(std::string * cadena, int tamCad)
                 else
                 {
                     //Regla 5
+                    if(tAux == EPSILON)
+                    {
+                        TOS.Desapilar();
+                        continue;
+                    }
+
                     if(i != tamCad) //Si'i' es igual al tamaño, se evalua con '$'
                         prodAux = gram.GetProduccion(tAux,cadena[i],tamProd);
                     else
@@ -68,10 +74,7 @@ bool ParserTD::EvaluarCadena(std::string * cadena, int tamCad)
                     //Regla 5_2
                     TOS.Desapilar();
                     for( ; tamProd > 0;--tamProd)
-                    {
-                        if(prodAux[tamProd-1] != EPSILON)
-                            TOS.Apilar(prodAux[tamProd-1]);
-                    }
+                        TOS.Apilar(prodAux[tamProd-1]);
                 }
             }
 

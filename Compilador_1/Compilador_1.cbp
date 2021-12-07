@@ -38,12 +38,16 @@
 		<Unit filename="Estructuras/AnalisadorLexico/ASintactico.h" />
 		<Unit filename="Estructuras/Buffer/Buffer.cpp" />
 		<Unit filename="Estructuras/Buffer/Buffer.h" />
+		<Unit filename="Estructuras/Gramatica/Gramatica.cpp" />
+		<Unit filename="Estructuras/Gramatica/Gramatica.h" />
 		<Unit filename="Estructuras/HasImprovisado/ArbolDeBVL.h" />
 		<Unit filename="Estructuras/HasImprovisado/ArbolDeBVL.tpp" />
 		<Unit filename="Estructuras/HasImprovisado/HasImp.h" />
 		<Unit filename="Estructuras/HasImprovisado/HasImp.tpp" />
 		<Unit filename="Estructuras/HasImprovisado/Llave.h" />
 		<Unit filename="Estructuras/HasImprovisado/Llave.tpp" />
+		<Unit filename="Estructuras/Parser/ParserTD.cpp" />
+		<Unit filename="Estructuras/Parser/ParserTD.h" />
 		<Unit filename="Estructuras/Utileria/ColaCircular.h" />
 		<Unit filename="Estructuras/Utileria/ColaCircular.tpp" />
 		<Unit filename="Estructuras/Utileria/Pila.h" />

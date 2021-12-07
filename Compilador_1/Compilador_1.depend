@@ -75,7 +75,7 @@
 	<iostream>
 	"../HasImprovisado/HasImp.h"
 
-1638905887 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\parser\parsertd.cpp
+1638915987 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\parser\parsertd.cpp
 	"ParserTD.h"
 
 1638902499 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\parser\parsertd.h
@@ -93,7 +93,7 @@
 1638636838 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\utileria.cpp
 	"Utileria.h"
 
-1638903549 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
+1638919863 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
 	<iostream>
 	<fstream>
 	"Estructuras/AnalisadorLexico/ASintactico.h"
