@@ -146,6 +146,13 @@ public:
     *
     */std::string GetT() const;
 
+    //*************************************************************************************
+    /** \brief Retorna el token del estado
+    *   \return True si el estado actual es de aceptacion, false de lo contrario
+    *   \exception std::bad_alloc::Grosero El estado actual no es de aceptacion
+    *
+    */double GetValorTValue(const std::string &t) const;
+
  /*****************************************************************************************
  ************************************   Excepciónes   *************************************
  *****************************************************************************************/
@@ -184,6 +191,7 @@ private:
     AFD aVariables;
     std::string *listTonkenConst;
     std::string *listTonkenVar;
+    HasImp<std::string, double> tablaTValue;
 
 
  /*****************************************************************************************
@@ -199,6 +207,16 @@ private:
     *   \param relCol Los car. de las columnas (Responde ¿Que car. está en la columna x?)
     *
     */void InicializarAFD(const char *dir, AFD & afd,std::string **lTokens) const ;
+
+    //*************************************************************************************
+    /** \brief Identifica si un token es un valor, de ser así, lo guarda en la tabla
+    *
+    *   \param t El token generado
+    *   \param buf El Buffer
+    *   \param tam El tamaño del token leido
+    *   \param relCol Los car. de las columnas (Responde ¿Que car. está en la columna x?)
+    *
+    */void ReconocerToken(std::string &t,Buffer & buf, int tam);
 
     //*************************************************************************************
     /** \brief Función para obtener el primer token generado por un automata

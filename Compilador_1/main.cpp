@@ -3,6 +3,7 @@
 #include <fstream>
 #include "Estructuras/AnalisadorLexico/ASintactico.h"
 #include "Estructuras/Utileria/Utileria.h"
+#include "Estructuras/Gramatica/Gramatica.h"
 
 using namespace std;
 

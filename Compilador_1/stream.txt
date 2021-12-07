@@ -1,1 +1,1 @@
-var++
+escribir 2.45 + 3^4

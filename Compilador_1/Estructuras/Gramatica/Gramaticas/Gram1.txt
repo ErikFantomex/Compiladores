@@ -1,0 +1,16 @@
+E	TCout S
+S	A S'
+S'	TPlus A S'			
+	TMinus A S'
+	'e
+A	B A'
+A'	TMult B A'
+	TDiv B A'
+	'e
+B	C B'
+B'	TPower C B'
+	'e
+C	TValue
+	TParIzq S TParDer
+
+

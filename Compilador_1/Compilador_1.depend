@@ -146,11 +146,12 @@
 1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\buffer.cpp
 	"Buffer.h"
 
-1638651791 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
+1638822526 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
 	<iostream>
 	<fstream>
 	"Estructuras/AnalisadorLexico/ASintactico.h"
 	"Estructuras/Utileria/Utileria.h"
+	"Estructuras/Gramatica/Gramatica.h"
 
 1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\buffer\buffer.cpp
 	"Buffer.h"
@@ -182,10 +183,10 @@
 	<limits>
 	<fstream>
 
-1638651891 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.cpp
+1638894329 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.cpp
 	"ASintactico.h"
 
-1638651293 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.h
+1638894323 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\analisadorlexico\asintactico.h
 	<iostream>
 	<stdexcept>
 	<string>
@@ -213,7 +214,7 @@
 1638636966 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\arboldebvl.tpp
 	"ArbolDeBVL.h"
 
-1638643843 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\llave.h
+1638892889 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\llave.h
 	<iostream>
 	<stdexcept>
 	"Llave.tpp"
@@ -230,4 +231,11 @@
 
 1638643333 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\llave.tpp
 	"Llave.h"
+
+1638894677 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\gramatica\gramatica.h
+	<iostream>
+	"../HasImprovisado/HasImp.h"
+
+1638894714 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\gramatica\gramatica.cpp
+	"Gramatica.h"
 

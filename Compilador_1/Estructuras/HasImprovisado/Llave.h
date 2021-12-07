@@ -22,21 +22,6 @@ class Llave
  ***************************   Funciones externas y amigas   ******************************
  *****************************************************************************************/
 
-
-    //*************************************************************************************
-    /** \brief imprime una llave en un flujo de salida
-    *
-    * \param salida el flujo de salida
-    * \return El mismo flujo de salida
-    *
-    */
-    template <typename t1,typename t2>
-    friend std::ostream & operator<<(std::ostream & salida,const Llave<t1,t2> &x)
-    {
-        salida<<'['<<x.llave<<" , "<<x.valor<<']';
-        return salida;
-    };
-
 public:
 
  /*****************************************************************************************

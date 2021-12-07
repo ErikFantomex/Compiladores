@@ -80,6 +80,12 @@ void ASintactico::Avanzar(const char &c)
     aConstantes.Avanzar(((int) c) + SANGRIA);
 }
 
+//*************************************************************************************
+double ASintactico::GetValorTValue(const std::string &t) const
+{
+    return tablaTValue.Buscar(t);
+}
+
 
 //*************************************************************************************
 std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
@@ -101,29 +107,34 @@ std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
         return NOACEPTACION;
     if(fin && tokenCons == NOACEPTACION)
     {
+        ReconocerToken(tokenVar,buff,maxVar);
         buff.Sacar(maxVar);
         return tokenVar;
     }
     if(fin && tokenVar == NOACEPTACION)
     {
+        ReconocerToken(tokenCons,buff,maxConst);
         buff.Sacar(maxConst);
         return tokenCons;
     }
 
     if(tokenCons == T_ERROR)
     {
+        ReconocerToken(tokenVar,buff,maxVar);
         buff.Sacar(maxVar);
         return tokenVar;
     }
 
     if(tokenVar == T_ERROR)
     {
+        ReconocerToken(tokenCons,buff,maxConst);
         buff.Sacar(maxConst);
         return tokenCons;
     }
 
     if(maxConst  == maxVar)
     {
+        ReconocerToken(tokenCons,buff,maxConst);
         buff.Sacar(maxConst);
         return tokenCons;
     }
@@ -131,11 +142,13 @@ std::string ASintactico::LeerBuffer(Buffer &buff, bool fin)
     {
         if(maxConst > maxVar)
         {
+            ReconocerToken(tokenCons,buff,maxConst);
             buff.Sacar(maxConst);
             return tokenCons;
         }
         else
         {
+            ReconocerToken(tokenVar,buff,maxVar);
             buff.Sacar(maxVar);
             return tokenVar;
         }
@@ -167,6 +180,28 @@ const char * ASintactico::TablaIncorrecta::what() const throw()
  /*****************************************************************************************
  *********************************   Metodos privados   ***********************************
  *****************************************************************************************/
+
+void ASintactico::ReconocerToken(std::string &t,Buffer & buf, int tam)
+{
+    if(t == "TValue")
+    {
+        double _val;
+        char valor[50];
+        for(int i=0;i<tam;++i)
+        {
+            t+=buf[i];
+            valor[i]=buf[i];
+        }
+        valor[tam] = '\0';
+
+        _val = atof(valor);
+        std::string _= valor;
+
+        tablaTValue.Agregar(t,_val);
+    }
+
+}
+
 //*************************************************************************************
 std::string ASintactico::EvaluarAutomata(Buffer &buff, AFD &automata,
                 int &tamCadMasLarga, std::string *listaToken)
@@ -240,7 +275,6 @@ void ASintactico::LigarColumnas(int r[],std::ifstream &ent) const
         r[col++]= ((int)NormalizarCaracter(texto,i))+SANGRIA;
     }
 }
-
 
 //*************************************************************************************
 int ASintactico::NumerarEstados(HasImp<std::string,int> &mapa,std::ifstream &ent) const
