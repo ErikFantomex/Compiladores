@@ -36,6 +36,7 @@ class Gramatica
     */
     friend std::ostream & operator<<(std::ostream & salida, const Gramatica &grm);
 
+
 public:
 
  /*****************************************************************************************
@@ -45,7 +46,7 @@ public:
     //*************************************************************************************
     /** \brief Constructor que lee la gramtica de un lenguaje
     *
-    */explicit Gramatica(const char *dir);
+    */Gramatica();
 
 
     //*************************************************************************************
@@ -89,6 +90,20 @@ public:
     */std::string * GetProduccion(const std::string &i,
                             const std::string &j,int & tam) ;
 
+    /** \brief Funcion para leer una gramamtica
+     * \param dir La direccion de la gramatica
+     *
+     */
+    void InicializarGram(const char *dir);
+
+    //*************************************************************************************
+    /** \brief Le quita el "valor" a los tokens
+    *
+    *   \param t El token a normalizar
+    *   \return El token normalizado
+    *
+    */std::string NormalizarT(const std::string &t);
+
 /*****************************************************************************************
  ************************************   Excepciónes   *************************************
  *****************************************************************************************/
@@ -122,13 +137,6 @@ private:
     *
     */void Dimencionar(const int &n, const int &m);
 
-    //*************************************************************************************
-    /** \brief Le quita el "valor" a los tokens
-    *
-    *   \param t El token a normalizar
-    *   \return El token normalizado
-    *
-    */std::string NormalizarT(const std::string &t);
 
     //*************************************************************************************
     /** \brief Libera la memoria reservada

@@ -10,9 +10,11 @@
  **********************************   Constructores    ************************************
  *****************************************************************************************/
 //*************************************************************************************
-Gramatica::Gramatica(const char *dir)
+Gramatica::Gramatica()
 {
-    LeerGramatica(dir);
+    producciones = NULL;
+    tamProducion = NULL;
+    tablaProducciones=NULL;
 }
 
 //*************************************************************************************
@@ -50,11 +52,21 @@ Gramatica & Gramatica::operator= (const Gramatica & afd2)
 std::string * Gramatica::GetProduccion(const std::string &i,
         const std::string &j,int & tam)
 {
+
     std::string aux =NormalizarT(j);
+
     int prod = tablaProducciones[mapaProducciones.Buscar(i)][mapaTerminales.Buscar(aux)];
+    if(prod == -1) prod=14;
 
     tam = tamProducion[prod];
     return producciones[prod];
+}
+
+//*************************************************************************************
+void Gramatica::InicializarGram(const char *dir)
+{
+    Vaciar();
+    LeerGramatica(dir);
 }
 
 
@@ -92,6 +104,8 @@ void Gramatica::LeerGramatica(const char *dir )
 void Gramatica::Vaciar()
 {
 
+    if(tablaProducciones == NULL) return;
+
     for(int i=0;i<9;++i)
         delete [] tablaProducciones[i];
     delete [] tablaProducciones;
@@ -105,6 +119,7 @@ void Gramatica::Vaciar()
 //*************************************************************************************
 void Gramatica::Parche()
 {
+
     mapaProducciones.Agregar("E",0);
     mapaProducciones.Agregar("S",1);
     mapaProducciones.Agregar("S\'",2);
@@ -114,15 +129,16 @@ void Gramatica::Parche()
     mapaProducciones.Agregar("B\'",6);
     mapaProducciones.Agregar("C",7);
 
-    mapaTerminales.Agregar("TPlus",0);
-    mapaTerminales.Agregar("TMinus",1);
-    mapaTerminales.Agregar("TMult",2);
-    mapaTerminales.Agregar("TDiv",3);
-    mapaTerminales.Agregar("TPower",4);
-    mapaTerminales.Agregar("TValue",5);
-    mapaTerminales.Agregar("TParIzq",6);
-    mapaTerminales.Agregar("TParDer",7);
-    mapaTerminales.Agregar(FINCADENA,8);
+    mapaTerminales.Agregar("TCout",0);
+    mapaTerminales.Agregar("TPlus",1);
+    mapaTerminales.Agregar("TMinus",2);
+    mapaTerminales.Agregar("TMult",3);
+    mapaTerminales.Agregar("TDiv",4);
+    mapaTerminales.Agregar("TPower",5);
+    mapaTerminales.Agregar("TValue",6);
+    mapaTerminales.Agregar("TParIzq",7);
+    mapaTerminales.Agregar("TParDer",8);
+    mapaTerminales.Agregar(FINCADENA,9);
 
     tablaProducciones = new int* [9];
     for(int i=0;i<9;++i)

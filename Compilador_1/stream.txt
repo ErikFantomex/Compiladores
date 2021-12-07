@@ -1,1 +1,1 @@
-escribir 2.45 + 3^4
+escribir 2.45 ++ 3^4

@@ -185,6 +185,7 @@ void ASintactico::ReconocerToken(std::string &t,Buffer & buf, int tam)
 {
     if(t == "TValue")
     {
+        t+='*';
         double _val;
         char valor[50];
         for(int i=0;i<tam;++i)

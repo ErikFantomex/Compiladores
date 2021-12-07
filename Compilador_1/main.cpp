@@ -4,6 +4,7 @@
 #include "Estructuras/AnalisadorLexico/ASintactico.h"
 #include "Estructuras/Utileria/Utileria.h"
 #include "Estructuras/Gramatica/Gramatica.h"
+#include "Estructuras/Parser/ParserTD.h"
 
 using namespace std;
 
@@ -39,14 +40,12 @@ int main()
 //******************************************************************************************
 void Lectura(ifstream &entrada )
 {
-    char nexLinea[300];
-
     ASintactico aLexico("Automatas/AutomataConstantes.txt","Automatas/AutomataVariables.txt");
+    char nexLinea[300];
     Buffer bufAL(300);
     int numTokoens=0;
     std::string cadenaTokens[10000];
     std::string tAux;
-
     for(int linea = 0;!entrada.eof(); ++linea )
     {
         entrada.getline(nexLinea,300);
@@ -72,6 +71,7 @@ void Lectura(ifstream &entrada )
         }
     }
 
+    ParserTD par("Estructuras/Parser/Gramaticas/Gram1.txt");
     while(!bufAL.EstaVacio())
     {
         tAux = aLexico.LeerBuffer(bufAL,true);
@@ -85,6 +85,8 @@ void Lectura(ifstream &entrada )
                 cadenaTokens[numTokoens++] = tAux;
     }
 
-    for(int i=0;i<numTokoens;++i)
-        cout<<cadenaTokens[i]<<'\n';
+    if(par.EvaluarCadena(cadenaTokens,numTokoens))
+        cout<<"Si se acepta";
+    else
+        cout<<"No se acepta";
 }
