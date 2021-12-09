@@ -65,10 +65,10 @@
 1638643535 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\hasimprovisado\hasimp.tpp
 	"HasImp.h"
 
-1638635994 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\buffer\buffer.cpp
+1639071496 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\buffer\buffer.cpp
 	"Buffer.h"
 
-1638905804 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\gramatica\gramatica.cpp
+1639074572 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\gramatica\gramatica.cpp
 	"Gramatica.h"
 
 1638904128 c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\gramatica\gramatica.h
@@ -93,7 +93,7 @@
 1638636838 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\estructuras\utileria\utileria.cpp
 	"Utileria.h"
 
-1638919863 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
+1639071268 source:c:\users\dell\documents\unison__pandemico\5_to\compiladores\gitcompilador\tareadeexpreciones.pdf\compilador_1\main.cpp
 	<iostream>
 	<fstream>
 	"Estructuras/AnalisadorLexico/ASintactico.h"

@@ -1,1 +1,4 @@
-escribir 2.45 + 3^4
+escribir ((4+5) * (3+2)) 
+/* holamundo 
+año = 4 	; 	
+	número papá = verdadero*/

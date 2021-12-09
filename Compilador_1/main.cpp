@@ -72,6 +72,7 @@ void Lectura(ifstream &entrada )
                         cadenaTokens[numTokoens++] = tAux;
             }
         }
+        bufAL.Meter('\n');
     }
 
     while(!bufAL.EstaVacio())
@@ -85,6 +86,11 @@ void Lectura(ifstream &entrada )
         else
             if(tAux != T_ESPACIO)
                 cadenaTokens[numTokoens++] = tAux;
+    }
+
+    for(int i=0;i<numTokoens;++i)
+    {
+        std::cout<<cadenaTokens[i]<<'\n';
     }
 
     ParserTD par("Estructuras/Parser/Gramaticas/Gram1.txt");

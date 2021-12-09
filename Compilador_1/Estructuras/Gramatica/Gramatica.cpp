@@ -172,7 +172,7 @@ void Gramatica::Parche()
     tablaProducciones[6][8]=11;
     tablaProducciones[6][9]=11;
     tablaProducciones[7][6]=12;
-    tablaProducciones[7][7]=12;
+    tablaProducciones[7][7]=13;
 
 
     producciones = new std::string*[16];
@@ -210,7 +210,7 @@ void Gramatica::Parche()
     producciones[12][0] = "TValue";
     producciones[13][0] = "TParIzq";
     producciones[13][1] = "S";
-    producciones[13][2] = "TPaDer";
+    producciones[13][2] = "TParDer";
     producciones[14][0] = P_ERRONEA;
 
     //Numeros de tokens que tiene la produccion 'i'

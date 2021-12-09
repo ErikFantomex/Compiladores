@@ -124,7 +124,11 @@ bool Buffer::Meter(const char & c )
 
     if(CaracterValido( caracteres[ IndiceUltimo() ] ,c ))
     {
-        caracteres[fnBf++]=c;
+        if(c >= 'A' && c <= 'Z')
+            caracteres[fnBf++]=c+32;
+        else
+            caracteres[fnBf++]=c;
+
 
         if(fnBf >= tamano) fnBf = 0; //Vuelta de carro
         if(fnBf == inBf) lleno = true;
