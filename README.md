@@ -1,4 +1,6 @@
-# Compiladores-
+# Compiladores
+<img src="https://github.com/ErikFantomex/Compiladores/blob/main/compilador.jpeg" alt="banner"/>
+
 
 Proyecto:
 Creación de un traductor para un nuevo lenguaje de programación básico.
